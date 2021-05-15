@@ -1,0 +1,19 @@
+[package]
+name = "pg_wiki_import"
+version = "0.1.0"
+authors = ["vbakc"]
+edition = "2018"
+description = "Import wikipedia dump into PostgreSQL"
+readme = "./Readme.md"
+repository = "https://github.com/vbakc/pg_wiki_import"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+envy = "0.4" # Deserialize environment variables into typesafe structs
+quick-xml = "0.22"
+serde = "1"
+serde_derive = "1"
+sqlx = { git = "https://github.com/launchbadge/sqlx", branch = "ab/more-pool-fixes", features = ["runtime-tokio-rustls", "postgres", "migrate", "macros"] }
+tokio = { version = "1.5", features = ["macros", "rt"] }
