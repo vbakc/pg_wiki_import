@@ -72,5 +72,6 @@ async fn main() -> Result<(), Box<dyn Error>> {
         buf.clear();
     }
 
+    db_pool.close().await;
     Ok(())
 }
