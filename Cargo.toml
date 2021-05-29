@@ -1,6 +1,6 @@
 [package]
 name = "pg_wiki_import"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["vbakc"]
 edition = "2018"
 description = "Import wikipedia dump into PostgreSQL"
@@ -15,5 +15,5 @@ envy = "0.4" # Deserialize environment variables into typesafe structs
 quick-xml = "0.22"
 serde = "1"
 serde_derive = "1"
-sqlx = { git = "https://github.com/launchbadge/sqlx", branch = "ab/more-pool-fixes", features = ["runtime-tokio-rustls", "postgres", "migrate", "macros"] }
+sqlx = { version = "~0.5.5", features = ["runtime-tokio-rustls", "postgres", "migrate", "macros"] }
 tokio = { version = "1.5", features = ["macros", "rt"] }
